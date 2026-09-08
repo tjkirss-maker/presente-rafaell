@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Para Rafaell ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         TELA DA SENHA
+    ========================== -->
+
+    <section id="telaSenha" class="tela">
+
+        <div class="coracao">❤️</div>
+
+        <h1>Tenho uma surpresa para você...</h1>
+
+        <p>
+            Mas primeiro você precisa descobrir a senha. 👀
+        </p>
+
+        <div class="caixa">
+
+            <h2>🔐 Qual é a senha?</h2>
+
+            <input
+                type="password"
+                id="senha"
+                placeholder="Digite a senha"
+            >
+
+            <button onclick="verificarSenha()">
+                Entrar ❤️
+            </button>
+
+            <p id="mensagemSenha"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TELA DA PERGUNTA
+    ========================== -->
+
+    <section id="telaPergunta" class="tela escondida">
+
+        <div class="coracao">💕</div>
+
+        <h1>Rafaell...</h1>
+
+        <div class="caixa">
+
+            <h2>
+                Você ainda escolheria ficar comigo?
+            </h2>
+
+            <p>
+                Pense bem antes de responder... 👀😂
+            </p>
+
+            <button onclick="abrirCarta()">
+                SIM ❤️
+            </button>
+
+            <button
+                id="botaoNao"
+                class="botao-nao"
+                onmouseover="fugir()"
+                onclick="fugir()"
+            >
+                NÃO 😈
+            </button>
+
+            <p id="mensagemNao"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CARTA
+    ========================== -->
+
+    <section id="telaCarta" class="tela escondida">
+
+        <div class="coracao">💌</div>
+
+        <h1>Para o meu amor ❤️</h1>
+
+        <div class="carta">
+
+            <h2>Meu amor, Rafaell...</h2>
+
+            <p>
+                Hoje é um dia muito especial, porque é o dia
+                em que nasceu uma das pessoas mais importantes
+                da minha vida.
+            </p>
+
+            <p>
+                Você mudou a minha forma de viver e me mostrou
+                o que realmente significa amar alguém.
+            </p>
+
+            <p>
+                Sou muito grata a Deus por ter colocado na minha
+                vida um homem tão carinhoso, cuidadoso e especial.
+            </p>
+
+            <p>
+                Você consegue ser muito irritante quando quer 😂,
+                mas mesmo assim continua sendo a pessoa que eu amo.
+            </p>
+
+            <p>
+                Espero que aos 22 anos você consiga realizar
+                todos os seus sonhos, seus planos e tudo aquilo
+                que deseja para o futuro.
+            </p>
+
+            <p>
+                Quero muito ver você feliz e conquistando tudo
+                o que sonha.
+            </p>
+
+            <p>
+                Nossa história começou na escola, mas espero
+                que ela continue por muitos e muitos anos.
+            </p>
+
+            <p>
+                Obrigada por fazer parte da minha vida,
+                por cuidar de mim e por me mostrar um amor
+                tão bonito.
+            </p>
+
+            <p class="destaque">
+                Eu te amo muito. ❤️
+            </p>
+
+            <p class="assinatura">
+                Com amor,<br>
+                Gabriella ❤️
+            </p>
+
+        </div>
+
+        <button onclick="mostrarBatalha()">
+            Continuar... 👀
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         BATALHA FINAL
+    ========================== -->
+
+    <section id="telaBatalha" class="batalha escondida">
+
+        <h1 class="titulo-batalha">
+            ⚔️ ÚLTIMO DESAFIO ⚔️
+        </h1>
+
+        <p class="subtitulo-batalha">
+            Rafaell... chegou a hora da batalha final 😂
+        </p>
+
+
+        <div class="arena">
+
+            <!-- KRATOS -->
+
+            <div class="personagem kratos">
+
+                <img
+                    src="imagens/kratos.png"
+                    alt="Kratos"
+                >
+
+            </div>
+
+
+            <!-- KANEKI -->
+
+            <div class="personagem kaneki">
+
+                <img
+                    src="imagens/kaneki.png"
+                    alt="Kaneki"
+                >
+
+            </div>
+
+
+            <!-- VS -->
+
+            <div class="vs">
+                VS
+            </div>
+
+
+            <!-- CONTAGEM -->
+
+            <div class="contagem">
+
+                <span id="numero3">3</span>
+
+                <span id="numero2">2</span>
+
+                <span id="numero1">1</span>
+
+            </div>
+
+
+            <!-- FIGHT -->
+
+            <div class="fight">
+                FIGHT! ⚔️
+            </div>
+
+
+            <!-- EXPLOSÃO -->
+
+            <div class="explosao">
+                💥
+            </div>
+
+        </div>
+
+
+        <!-- RESULTADO -->
+
+        <div id="resultadoBatalha" class="resultado escondido">
+
+            <h2>
+                ⚔️ KRATOS VENCE! ⚔️
+            </h2>
+
+            <div class="boy">
+                BOY.
+            </div>
+
+            <p>
+                😂 Desculpa, Kaneki.
+            </p>
+
+        </div>
+
+
+        <!-- FINAL ROMÂNTICO -->
+
+        <div id="finalAmor" class="final escondido">
+
+            <div class="casal">
+                👩🏻‍🤝‍👨🏻
+            </div>
+
+            <h1>
+                Gabriella ❤️ Rafaell
+            </h1>
+
+            <div class="data">
+                29 ❤️
+            </div>
+
+            <p>
+                Depois de todas as batalhas,
+                eu escolheria você de novo.
+            </p>
+
+            <p>
+                Nossa história começou na escola,
+                mas espero que ela continue por muitos
+                e muitos anos. ❤️
+            </p>
+
+            <p class="destaque">
+                Feliz aniversário, meu amor. 🎂❤️
+            </p>
+
+            <div class="coracoes">
+                ❤️ ✨ ❤️ ✨ ❤️
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

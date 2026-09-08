@@ -1,0 +1,999 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #65001c,
+            #25000b 45%,
+            #080006 100%
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   TELAS
+========================= */
+
+.tela {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px 20px;
+}
+
+.escondida {
+    display: none !important;
+}
+
+
+/* =========================
+   CORAÇÃO
+========================= */
+
+.coracao {
+    font-size: 80px;
+
+    margin-bottom: 20px;
+
+    animation: pulsar 1.5s infinite;
+}
+
+@keyframes pulsar {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+
+/* =========================
+   TEXTOS
+========================= */
+
+h1 {
+    margin-bottom: 20px;
+
+    font-size: 38px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.7;
+}
+
+
+/* =========================
+   CAIXA
+========================= */
+
+.caixa {
+
+    width: 100%;
+    max-width: 500px;
+
+    margin-top: 25px;
+
+    padding: 35px 25px;
+
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+input {
+
+    width: 100%;
+
+    padding: 15px;
+
+    margin: 10px 0;
+
+    border: none;
+
+    border-radius: 15px;
+
+    outline: none;
+
+    text-align: center;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+button {
+
+    padding: 14px 28px;
+
+    margin: 10px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #ff1744;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 20px rgba(255, 23, 68, 0.6);
+}
+
+.botao-nao {
+
+    background: #444;
+}
+
+
+/* =========================
+   CARTA
+========================= */
+
+.carta {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 30px auto;
+
+    padding: 40px 30px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255, 255, 255, 0.09);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.4);
+
+    text-align: left;
+}
+
+.carta h2 {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.carta p {
+
+    margin-bottom: 18px;
+}
+
+.destaque {
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.assinatura {
+
+    text-align: right;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   BATALHA
+========================= */
+
+.batalha {
+
+    min-height: 100vh;
+
+    padding: 50px 20px;
+
+    text-align: center;
+}
+
+.titulo-batalha {
+
+    font-size: 40px;
+
+    text-shadow:
+        0 0 15px red;
+}
+
+.subtitulo-batalha {
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   ARENA
+========================= */
+
+.arena {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 850px;
+
+    height: 450px;
+
+    margin: 30px auto;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    border: 3px solid rgba(255, 255, 255, 0.2);
+
+    background:
+        radial-gradient(
+            circle at center,
+            #6a1028 0%,
+            #260812 45%,
+            #050505 100%
+        );
+
+    box-shadow:
+        0 0 60px rgba(255, 0, 50, 0.3);
+}
+
+
+/* =========================
+   PERSONAGENS
+========================= */
+
+.personagem {
+
+    position: absolute;
+
+    bottom: 0;
+
+    width: 230px;
+
+    height: 380px;
+
+    z-index: 3;
+}
+
+.personagem img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   KRATOS
+========================= */
+
+.kratos {
+
+    left: 0;
+
+    animation:
+        kratosAtaque 6s infinite;
+}
+
+@keyframes kratosAtaque {
+
+    0% {
+
+        left: -20px;
+
+        transform: scale(0.9);
+    }
+
+    25% {
+
+        left: 20px;
+
+        transform: scale(1);
+    }
+
+    43% {
+
+        left: 280px;
+
+        transform:
+            scale(1.15)
+            rotate(-5deg);
+    }
+
+    50% {
+
+        left: 300px;
+
+        transform:
+            scale(1.2)
+            rotate(5deg);
+    }
+
+    60% {
+
+        left: 80px;
+
+        transform: scale(1);
+    }
+
+    100% {
+
+        left: -20px;
+
+        transform: scale(0.9);
+    }
+}
+
+
+/* =========================
+   KANEKI
+========================= */
+
+.kaneki {
+
+    right: 0;
+
+    animation:
+        kanekiAtaque 6s infinite;
+}
+
+@keyframes kanekiAtaque {
+
+    0% {
+
+        right: -20px;
+
+        transform: scale(0.9);
+    }
+
+    25% {
+
+        right: 20px;
+
+        transform: scale(1);
+    }
+
+    43% {
+
+        right: 280px;
+
+        transform:
+            scale(1.15)
+            rotate(5deg);
+    }
+
+    50% {
+
+        right: 300px;
+
+        transform:
+            scale(1.2)
+            rotate(-5deg);
+    }
+
+    60% {
+
+        right: 80px;
+
+        transform: scale(1);
+    }
+
+    100% {
+
+        right: -20px;
+
+        transform: scale(0.9);
+    }
+}
+
+
+/* =========================
+   VS
+========================= */
+
+.vs {
+
+    position: absolute;
+
+    left: 50%;
+    top: 45%;
+
+    transform:
+        translate(-50%, -50%);
+
+    z-index: 5;
+
+    font-size: 60px;
+
+    font-weight: bold;
+
+    text-shadow:
+        0 0 20px black;
+
+    animation:
+        vsAnimacao 6s infinite;
+}
+
+@keyframes vsAnimacao {
+
+    0%,
+    30% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+
+    43%,
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.3);
+    }
+}
+
+
+/* =========================
+   CONTAGEM
+========================= */
+
+.contagem {
+
+    position: absolute;
+
+    left: 50%;
+    top: 45%;
+
+    transform:
+        translate(-50%, -50%);
+
+    z-index: 10;
+
+    font-size: 90px;
+
+    font-weight: bold;
+
+    text-shadow:
+        0 0 25px black;
+}
+
+
+/* NÚMEROS */
+
+#numero3,
+#numero2,
+#numero1 {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    opacity: 0;
+}
+
+
+/* 3 */
+
+#numero3 {
+
+    animation:
+        numero3 6s infinite;
+}
+
+@keyframes numero3 {
+
+    0%,
+    3% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.3);
+    }
+
+    5%,
+    15% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.3);
+    }
+
+    18%,
+    100% {
+
+        opacity: 0;
+    }
+}
+
+
+/* 2 */
+
+#numero2 {
+
+    animation:
+        numero2 6s infinite;
+}
+
+@keyframes numero2 {
+
+    0%,
+    18% {
+
+        opacity: 0;
+    }
+
+    20%,
+    30% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.3);
+    }
+
+    33%,
+    100% {
+
+        opacity: 0;
+    }
+}
+
+
+/* 1 */
+
+#numero1 {
+
+    animation:
+        numero1 6s infinite;
+}
+
+@keyframes numero1 {
+
+    0%,
+    33% {
+
+        opacity: 0;
+    }
+
+    35%,
+    43% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.3);
+    }
+
+    46%,
+    100% {
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   FIGHT
+========================= */
+
+.fight {
+
+    position: absolute;
+
+    left: 50%;
+    top: 45%;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.3);
+
+    z-index: 15;
+
+    font-size: 70px;
+
+    font-weight: 900;
+
+    opacity: 0;
+
+    text-shadow:
+        4px 4px black,
+        0 0 30px red;
+
+    animation:
+        fightAnimacao 6s infinite;
+}
+
+@keyframes fightAnimacao {
+
+    0%,
+    42% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.3);
+    }
+
+    46% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.5);
+    }
+
+    52% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+
+    58%,
+    100% {
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   EXPLOSÃO
+========================= */
+
+.explosao {
+
+    position: absolute;
+
+    left: 50%;
+    top: 45%;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0);
+
+    z-index: 20;
+
+    font-size: 100px;
+
+    opacity: 0;
+
+    animation:
+        explosaoAnimacao 6s infinite;
+}
+
+@keyframes explosaoAnimacao {
+
+    0%,
+    47% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0);
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.5);
+    }
+
+    58% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(2);
+    }
+
+    100% {
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   RESULTADO
+========================= */
+
+.resultado {
+
+    margin-top: 30px;
+
+    animation:
+        aparecer 1s ease;
+}
+
+.resultado h2 {
+
+    font-size: 35px;
+
+    text-shadow:
+        0 0 15px red;
+}
+
+.boy {
+
+    margin: 15px;
+
+    font-size: 75px;
+
+    font-weight: bold;
+
+    text-shadow:
+        0 0 20px red;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    margin: 70px auto 20px;
+
+    padding: 40px 25px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.15);
+
+    animation:
+        aparecer 1.5s ease;
+}
+
+.casal {
+
+    font-size: 75px;
+
+    margin-bottom: 20px;
+
+    animation:
+        pulsar 2s infinite;
+}
+
+.data {
+
+    margin: 20px;
+
+    font-size: 30px;
+
+    font-weight: bold;
+}
+
+.coracoes {
+
+    margin-top: 25px;
+
+    font-size: 25px;
+}
+
+
+/* =========================
+   ANIMAÇÃO APARECER
+========================= */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .tela {
+
+        padding:
+            30px 15px;
+    }
+
+    h1 {
+
+        font-size: 28px;
+    }
+
+    .coracao {
+
+        font-size: 65px;
+    }
+
+    .caixa {
+
+        padding:
+            25px 18px;
+    }
+
+    .carta {
+
+        padding:
+            28px 20px;
+
+        text-align: left;
+    }
+
+    .arena {
+
+        height: 330px;
+
+        border-radius: 18px;
+    }
+
+    .personagem {
+
+        width: 155px;
+
+        height: 280px;
+    }
+
+    .kratos {
+
+        left: -10px;
+    }
+
+    .kaneki {
+
+        right: -10px;
+    }
+
+    .vs {
+
+        font-size: 38px;
+    }
+
+    .fight {
+
+        font-size: 42px;
+    }
+
+    .contagem {
+
+        font-size: 65px;
+    }
+
+    .explosao {
+
+        font-size: 70px;
+    }
+
+    .resultado h2 {
+
+        font-size: 25px;
+    }
+
+    .boy {
+
+        font-size: 55px;
+    }
+
+    .casal {
+
+        font-size: 60px;
+    }
+
+    .final h1 {
+
+        font-size: 27px;
+    }
+
+}
